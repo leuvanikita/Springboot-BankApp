@@ -1,0 +1,48 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+#
+### VS Code ###
+.vscode/
+terraform/bankapp_key
+terraform/bankapp_key.pub
+
+# Terraform directories
+terraform/.terraform/
+terraform/.terraform.lock.hcl
+
+# Terraform local provider binaries
+*.terraform.lock.hcl
+terraform-provider-aws*
+terraform-provider-aws_v6.7.0_x5
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+terraform/awscliv2.zip
