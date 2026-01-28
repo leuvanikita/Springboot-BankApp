@@ -1,0 +1,31 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: bankapp-ing
+  namespace: bankapp-ns
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+  ingressClassName: nginx # who guide path : nginx
+  tls:
+  - hosts:
+    - bankapp.freshfinds.site
+    secretName: bankapp-tls-secret
+  rules:
+    - host: bankapp.freshfinds.site # Domain name
+      http:
+        paths:
+          - path: "/"
+            pathType: Prefix
+            backend:
+              service:
+                name: bankapp-svc
+                port:
+                  number: 8080
+          # - pathType: Prefix
+          #   path: "/nginx"
+          #   backend:
+          #     service:
+          #       name: nginx-svc
+          #       port:
+          #         number: 80
