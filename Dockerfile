@@ -1,5 +1,5 @@
 #-------------Stage 1---3.9.4--------------
-FROM maven:3.9.8-eclipse-temurin-21-slim AS builder
+FROM maven:3.9.8-eclipse-temurin-21 AS builder
 
 WORKDIR /src
 
