@@ -16,6 +16,4 @@ COPY --from=builder /src/target/*.jar /src/target/bankapp.jar
 
 EXPOSE 8080
 
-USER nonroot
-
 ENTRYPOINT ["java", "-jar", "/src/target/bankapp.jar"]
